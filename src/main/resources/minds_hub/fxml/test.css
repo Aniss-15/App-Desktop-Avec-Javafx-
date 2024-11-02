@@ -1,0 +1,6 @@
+.list-cell {
+    -fx-padding: 10px;
+    -fx-border-color: transparent transparent lightgray transparent;
+    -fx-border-width: 0 0 1 0;  // Ajoute une bordure au bas de chaque cellule pour les séparer visuellement
+-fx-font-weight: bold;  // Rend le texte en gras
+}

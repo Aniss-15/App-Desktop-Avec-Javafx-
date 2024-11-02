@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="468.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="minds_hub.SessionC">
+   <children>
+      <Pane layoutX="20.0" layoutY="28.0" prefHeight="314.0" prefWidth="228.0">
+         <children>
+            <Label layoutX="25.0" layoutY="33.0" text="Date Debut" textFill="WHITE" />
+            <DatePicker fx:id="dateD" layoutX="27.0" layoutY="53.0" />
+            <Label layoutX="25.0" layoutY="96.0" prefHeight="17.0" prefWidth="54.0" text="Date Fin" textFill="WHITE" />
+            <DatePicker fx:id="DateF" layoutX="27.0" layoutY="113.0" />
+            <Label layoutX="27.0" layoutY="149.0" prefHeight="17.0" prefWidth="72.0" text="nomSession" textFill="WHITE" />
+            <TextField fx:id="nomS" layoutX="27.0" layoutY="166.0" prefHeight="25.0" prefWidth="183.0" />
+            <Label layoutX="27.0" layoutY="198.0" prefHeight="17.0" prefWidth="72.0" text="Formations" textFill="WHITE" />
+            <ComboBox fx:id="ListeF" layoutX="39.0" layoutY="215.0" prefWidth="150.0" />
+            <JFXButton fx:id="ajoutfx" layoutX="14.0" layoutY="265.0" onAction="#addS" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #032D4C;" text="Ajout" textFill="#ece3e3" />
+            <JFXButton fx:id="updatefx" layoutX="114.0" layoutY="265.0" onAction="#updateS" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #032D4C;" text="Update" textFill="#ece3e3" />
+         </children>
+      </Pane>
+      <TableView fx:id="tableS" layoutX="310.0" layoutY="70.0" prefHeight="246.0" prefWidth="438.0">
+        <columns>
+          <TableColumn fx:id="colD" prefWidth="75.0" text="Date Debut" />
+          <TableColumn fx:id="colF" prefWidth="75.0" text="Date Fin" />
+            <TableColumn fx:id="ColNomS" prefWidth="75.0" text="nom session" />
+            <TableColumn fx:id="colFr" prefWidth="137.5999755859375" text="Formations" />
+            <TableColumn fx:id="colid" prefWidth="74.39999999999998" text="ID" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="supp" layoutX="529.0" layoutY="342.0" onAction="#suppS" prefHeight="26.0" prefWidth="157.0" style="-fx-background-color: #032D4C;" text="Supprimer" textFill="#ece3e3" />
+      <JFXButton fx:id="Sexpiree" layoutX="288.0" layoutY="342.0" onAction="#expiree" prefHeight="26.0" prefWidth="194.0" style="-fx-background-color: #032D4C;" text="Liste Sessions Bientot expiree" textFill="#ece3e3" />
+      <Label layoutX="302.0" layoutY="29.0" prefHeight="18.0" prefWidth="82.0" text="Search Session" textFill="#e4e0e0" />
+      <TextField layoutX="393.0" layoutY="25.0" prefHeight="26.0" prefWidth="328.0" promptText="DateD" />
+   </children>
+</AnchorPane>
